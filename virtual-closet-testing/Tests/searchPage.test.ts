@@ -1,4 +1,4 @@
-import { SearchPage } from './searchPage'
+import { SearchPage } from '../Page-Objects/searchPage'
 
 const searchItem = new SearchPage
 
@@ -8,7 +8,7 @@ test('search for an item by brand', async () => {
     await searchItem.navigate()
     await (await searchItem.getElement(searchItem.searchInput)).sendKeys('Aritzia')
     await searchItem.click(searchItem.brand)
-    await searchItem.driver.sleep(200)
+    await searchItem.driver.sleep(400)
     await searchItem.click(searchItem.searchBtn)
     let value = await searchItem.driver.findElement(searchItem.firstEl).getText()
     expect(value).toContain('')

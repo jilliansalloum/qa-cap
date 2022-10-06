@@ -1,4 +1,4 @@
-import {BasePage} from './basePage'
+import {BasePage} from '../Page-Objects/basePage'
 import {Builder, By, Capabilities, until, WebDriver, WebElement} from 'selenium-webdriver'
 
 

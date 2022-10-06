@@ -1,4 +1,4 @@
-import { BasePage } from './basePage'
+import { BasePage } from '../Page-Objects/basePage'
 
 const basePage = new BasePage
 

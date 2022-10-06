@@ -11,6 +11,9 @@ export class AddItemPage extends BasePage {
     season: By = By.id('season')
     imgURL: By = By.id('img')
     addBtn: By = By.className('add-button')
+    lastCard: By = By.xpath("//*[text()='Long Sleeve Shirt']")
+    basePage: string = 'https://capstone-jilli.herokuapp.com/index.html'
+
 constructor() {
 super({url: 'https://capstone-jilli.herokuapp.com/add-item.html'})
 }

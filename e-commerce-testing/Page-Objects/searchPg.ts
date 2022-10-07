@@ -6,32 +6,17 @@ interface Options {
     url?: string;
 }
 
-export class HomePage {
+export class SearchPage {
     driver: WebDriver
     url: string = 'http://automationpractice.com/index.php'
-    signIn: By = By.className('login')
-    userInput: By = By.id('email')
-    pwInput: By = By.id('passwd')
-    signInBtn: By = By.id('SubmitLogin')
-    goHome: By = By.className('icon-chevron-left')
-    loginPage: string = 'http://automationpractice.com/index.php?controller=authentication&back=my-account'
-    signedInPage: string = 'http://automationpractice.com/index.php?controller=my-account'
-    ssAddtoCart: By = By.className('ajax_add_to_cart_button')
-    cntShopBtn: By = By.className('continue btn btn-default button exclusive-medium')
-    dresses: By = By.className('sf-with-ul')
+    searchBar: By = By.id('search_query_top')
+    searchBtn: By = By.className('btn btn-default button-search')
+    shoeResults: By = By.xpath("//contains[text()='shoes']")
     prntdDrs: By = By.css('a[data-id-product*="3"]')
-    prntdSumDrs: By = By.css('a[data-id-product*="4"]')
+    dresses: By = By.className('sf-with-ul')
     logoRedirect: By = By.className('logo img-responsive')
     cart: By = By.className('ajax_cart_quantity') 
-    proceed: By = By.className('button btn btn-default standard-checkout button-medium')
-    proceedAdress: By = By.xpath("//*[text()='Proceed to checkout']");
-    proceedPayment: By = By.className('button btn btn-default standard-checkout button-medium');
-    tos: By = By.className('checker')
-    bank: By = By.className('bankwire')
-    confirm: By = By.xpath("//*[text()='I confirm my order']")
-    step1: string = 'http://automationpractice.com/index.php?controller=order&step=1'
-    paymentMethod: string = 'http://automationpractice.com/index.php?controller=order&multi-shipping='
-    pgHeading: By = By.className('page-heading')
+
 
     constructor(options?: Options) {
         if(options && options.driver) this.driver = options.driver
